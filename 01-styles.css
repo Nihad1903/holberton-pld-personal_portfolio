@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header {
+    padding: 30px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.nav-links a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 50px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 50px;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #7CB342;
+    color: #ffffff;
+    padding: 18px 32px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("image.png");
+    background-size: cover;
+}
+
+.companies {
+    padding: 80px 0;
+}
+
+.companies h2 {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.company-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    height: 90px;
+    background-color: transparent;
+}
+
+.clickup::before {
+    content: 'ClickUp';
+    color: #7B68EE;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.dropbox::before {
+    content: 'Dropbox';
+    color: #0061FF;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.paychex::before {
+    content: 'PAYCHEX';
+    color: #00A86B;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.elastic::before {
+    content: 'elastic';
+    color: #FED10A;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.stripe::before {
+    content: 'stripe';
+    color: #635BFF;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 60px;
+        text-align: center;
+        padding: 80px 0 120px 0;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .profile-image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .company-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .company-logos .company-logo:nth-child(5) {
+        grid-column: 1 / -1;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 60px 0 100px 0;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .profile-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .companies {
+        padding: 60px 0;
+    }
+
+    .company-logos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .company-logo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+}
