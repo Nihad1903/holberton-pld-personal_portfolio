@@ -147,8 +147,9 @@ nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
-    align-items: center;
+    align-items: stretch; 
 }
+
 
 .company-logo {
     display: flex;
@@ -159,6 +160,7 @@ nav {
     border-radius: 8px;
     height: 90px;
     background-color: transparent;
+    width: 100%; 
 }
 
 .clickup::before {
@@ -240,8 +242,9 @@ nav {
 
     .company-logos .company-logo:nth-child(5) {
         grid-column: 1 / -1;
-        max-width: 300px;
         margin: 0 auto;
+        width: 100%; 
+        max-width: none; 
     }
 }
 
@@ -274,9 +277,9 @@ nav {
     }
 
     .company-logo {
-        max-width: 280px;
         margin: 0 auto;
-    }
+        width: 100%;
+        max-width: none;
 
     .social-icons {
         gap: 20px;
